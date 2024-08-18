@@ -23,16 +23,29 @@ Countermeasures: Modern operating systems use various techniques to prevent such
 Here’s a conceptual example in x86 assembly:
 
 assembly
+
 Copy code
+
 nop             ; No operation, CPU just moves to the next instruction
+
 nop             ; More NOPs (NOP sled)
+
 nop
+
 nop
+
 ...             ; Continue NOP sled
+
 shellcode_start:
+
 ; Your shellcode begins here, for example:
+
 xor eax, eax    ; Clear EAX register
+
 push eax        ; Push EAX (which is 0) onto the stack (null-terminating string)
+
 ; Other shellcode instructions follow...
+
 Summary:
+
 A NOP sled overflow is a technique used to exploit buffer overflows by padding the buffer with NOP instructions, making it easier to land on and execute the shellcode. While more sophisticated and modern protections have reduced the efficacy of such techniques, they remain an important concept in the study of computer security and exploitation.
