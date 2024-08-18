@@ -22,9 +22,8 @@ Countermeasures: Modern operating systems use various techniques to prevent such
 6. Example in Assembly
 Here’s a conceptual example in x86 assembly:
 
-assembly
 
-Copy code
+
 
 nop             ; No operation, CPU just moves to the next instruction
 
@@ -45,6 +44,8 @@ xor eax, eax    ; Clear EAX register
 push eax        ; Push EAX (which is 0) onto the stack (null-terminating string)
 
 ; Other shellcode instructions follow...
+
+
 
 Summary:
 
